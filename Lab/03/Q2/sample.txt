@@ -1,0 +1,8 @@
+the sky is blue.
+my sweater is not blue.
+blue is my favourite color.
+
+Modified content: 
+the sky is pink.
+my sweater is not pink.
+pink is my favourite color.
