@@ -4,3 +4,26 @@ Purpose: This converts the list of words (lst) back into a single string, where 
 How it works:
 The join() method concatenates all elements of the list (lst) into a single string.
 The string ' ' specifies the separator between elements. In this case, it uses a space to join the words.
+
+
+---------------------------------------------------------------------------------------------------------
+ 
+
+#Saving Data (json.dump()):
+json.dump() is used to serialize the Python dictionary (employee_data) and write it to the specified file (employee_data.json).
+indent=4: This adds indentation to the JSON file for readability (pretty-printing).
+
+try:
+        with open(file_path, 'w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4)  # indent=4 for pretty formatting
+        print(f"Data saved successfully to '{file_path}'.")
+    except Exception as e:
+        print(f"An error occurred while saving data to the JSON file: {e}")
+
+#Loading Data (json.load()):
+json.load() reads the JSON file and converts it back into a Python dictionary.
+with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)  # Load the JSON data
+        print(f"Data loaded successfully from '{file_path}'.")
+        return data
+---------------------------------------------------------------------------------------------------------
