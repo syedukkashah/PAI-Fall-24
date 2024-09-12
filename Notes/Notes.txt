@@ -210,6 +210,27 @@ class Son(Father):
     def show(self):
         print("son instance")
 s = Son()
+
+#single inheritance
+
+class Animal():
+    def __init__(self):
+        print("animal created")
+    def who_am_i(self):
+        print("i am an animal")
+    def eat(self):
+        print("eating")
+
+class Dog(Animal):
+    def __init__(self):
+        super().__init__()
+        print("dog created")
+    def who_am_i(self):
+        print("i am dog")
+
+a = Dog()
+a.eat()
+a.who_am_i()
 ---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
