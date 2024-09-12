@@ -21,7 +21,24 @@ owner name = “Umer" # no space allowed
 #operator precedence
 #PEMDAS (Parentheses->Power->Multiplication->Addition->Left to Right)
 ---------------------------------------------------------------------------------------------------------
+#Random lib
 
+import random
+a = random.randint(1,7) # 1 and 7 are included
+b = random.randrange(1,3) # 3 is not included
+c = random.random() # floating point between 0.0 and 1.0 where 1.0 is not included
+print(a, b, c)
+j = [1,2,3,4]
+x = random.choice(j) # Gives a random value
+random.shuffle(j) #random.shuffle() shuffles the list, doesn't return anything
+print(x)
+print(j)
+random.seed(42) #used to replicate same results
+def print_random():
+    for i in range(5):
+        print(random.randint(1,100))
+print_random()
+---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
 Purpose: This converts the list of words (lst) back into a single string, where each word is separated by a space (' ').
