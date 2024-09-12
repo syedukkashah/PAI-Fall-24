@@ -257,6 +257,22 @@ class GoldenRetriever(Dog):
 o = GoldenRetriever("tommy", "black")
 o.showDetails()
 
+#static method (not attached to instance of the class but to the class itself)
+
+class Math:
+    def __init__(self, num):
+        self.num=num
+    def addToNum(self, n):
+        self.num = self.num + n
+    def addNums(x,y):
+        return x+y
+Math.addNums = staticmethod(Math.addNums)
+a = Math(5)
+print(a.num)
+a.addToNum(6)
+print(a.num)
+print(Math.addNums(5,6))
+
 ---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
