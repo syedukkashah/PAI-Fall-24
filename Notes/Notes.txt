@@ -139,6 +139,28 @@ x = tuple(y)
 print(x)
 
 ---------------------------------------------------------------------------------------------------------
+Colllections functions
+
+from collections import Counter
+from collections import ChainMap
+
+x = lambda a : a + 10
+print(x(5))
+x = lambda a, b : a * b
+print(x(5, 6))
+
+a = [1,1,1,2,2,23,4,3,2,4,5,6,7,86,5,4,0,0,0,0,0,0,0,0]
+c = Counter(a)
+print(c)
+print(c.most_common())
+c.subtract({0:2, 86:1})
+print(c)
+a = {1:'fast', 2:'iba'}
+b = {3:'landhi',4:'johar'}
+c = ChainMap(a,b) #dict like It is dictionary like class for creating a single view of multiple mapping. It encapsulates many dictionaries into one
+print(c)
+
+---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
 Purpose: This converts the list of words (lst) back into a single string, where each word is separated by a space (' ').
