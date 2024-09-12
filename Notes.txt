@@ -18,6 +18,9 @@ owner name = “Umer" # no space allowed
 # only alpha numeric and underscore
 
 ---------------------------------------------------------------------------------------------------------
+#operator precedence
+#PEMDAS (Parentheses->Power->Multiplication->Addition->Left to Right)
+---------------------------------------------------------------------------------------------------------
 
 ' '.join(lst):
 
