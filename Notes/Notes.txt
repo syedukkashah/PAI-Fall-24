@@ -1,1 +1,119 @@
 
+
+Variable Conventions
+
+# valid names
+
+numOfBoxes = 7
+_num_of_boxes = 10 # this is a different variable than numOfBoxes
+_NUM_OF_BOXES = 15 # a different variable as names are case sensitive
+ownerName = “Atif"
+ownerName2 = “Muneeba" # different, valid variable
+
+# invalid names
+2ownerName = “Saeeda" # cannot start with number.
+# Only letter or underscore in the beginning
+owner-name = “Bilal" # no hypen
+owner name = “Umer" # no space allowed
+# only alpha numeric and underscore
+
+---------------------------------------------------------------------------------------------------------
+#operator precedence
+#PEMDAS (Parentheses->Power->Multiplication->Addition->Left to Right)
+---------------------------------------------------------------------------------------------------------
+#Random lib
+
+import random
+a = random.randint(1,7) # 1 and 7 are included
+b = random.randrange(1,3) # 3 is not included
+c = random.random() # floating point between 0.0 and 1.0 where 1.0 is not included
+print(a, b, c)
+j = [1,2,3,4]
+x = random.choice(j) # Gives a random value
+random.shuffle(j) #random.shuffle() shuffles the list, doesn't return anything
+print(x)
+print(j)
+random.seed(42) #used to replicate same results
+def print_random():
+    for i in range(5):
+        print(random.randint(1,100))
+print_random()
+---------------------------------------------------------------------------------------------------------
+
+Array functions
+
+import array
+#arrayName = array.array(type code for data type, [array items])
+abc = array.array('d', [2.5, 4.9, 6.7]) # 'd' is a type code
+print(abc)
+abc.insert(1, 6.2) #arrayName.insert(index, value)
+print(abc)
+balance = array.array('i', [300, 200, 100])
+print(balance[1])
+balance.append(50) #adds another element to array after last index
+print(balance)
+balance.extend([30, 20, 10]) #more than 1 element can be appended
+print(balance)
+print(balance)
+xyz= array.array('q',[3,9,6,5,20,13,19,22,30,25])
+print(xyz[1:4])
+print(xyz[7:10])
+---------------------------------------------------------------------
+import array as myarr
+first = myarr.array('b', [4,6,8])
+second = myarr.array('b', [9, 12, 15])
+numbers = first + second #concatenating two arrays
+print(numbers)
+numbers.pop(2) #pop functions name index number as argument to delete it
+numbers.remove(12) #remove function takes value to be removed as argument
+print(numbers)
+clear() = Removes all the elements from the list
+copy() = Returns a copy of the list
+count() = Returns the number of elements with the specified value
+index() = Returns the index of the first element with the specified value
+reverse() = Reverses the order of the list
+sort() = Sorts the list ins ascending order
+---------------------------------------------------------------------------------------------------------
+There are four collection data types in the Python programming
+language:
+1) List is a collection which is ordered and changeable. Allows duplicate
+members.
+2)Tuple is a collection which is ordered and unchangeable. Allows
+duplicate members.
+3)Set is a collection which is unordered and unindexed. No duplicate
+members.
+4)Dictionary is a collection which is ordered* and changeable. No
+duplicate members.
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+' '.join(lst):
+
+Purpose: This converts the list of words (lst) back into a single string, where each word is separated by a space (' ').
+How it works:
+The join() method concatenates all elements of the list (lst) into a single string.
+The string ' ' specifies the separator between elements. In this case, it uses a space to join the words.
+
+---------------------------------------------------------------------------------------------------------
+ 
+#Saving Data (json.dump()):
+json.dump() is used to serialize the Python dictionary (employee_data) and write it to the specified file (employee_data.json).
+indent=4: This adds indentation to the JSON file for readability (pretty-printing).
+
+try:
+        with open(file_path, 'w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4)  # indent=4 for pretty formatting
+        print(f"Data saved successfully to '{file_path}'.")
+    except Exception as e:
+        print(f"An error occurred while saving data to the JSON file: {e}")
+
+#Loading Data (json.load()):
+json.load() reads the JSON file and converts it back into a Python dictionary.
+with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)  # Load the JSON data
+        print(f"Data loaded successfully from '{file_path}'.")
+        return data
+---------------------------------------------------------------------------------------------------------
