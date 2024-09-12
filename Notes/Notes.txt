@@ -39,9 +39,18 @@ def print_random():
         print(random.randint(1,100))
 print_random()
 ---------------------------------------------------------------------------------------------------------
-
+There are four collection data types in the Python programming
+language:
+1) List is a collection which is ordered and changeable. Allows duplicate
+members.
+2)Tuple is a collection which is ordered and unchangeable. Allows
+duplicate members.
+3)Set is a collection which is unordered and unindexed. No duplicate
+members.
+4)Dictionary is a collection which is ordered* and changeable. No
+duplicate members.
 Array functions
-
+---------------------------------------------------------------------------------------------------------
 import array
 #arrayName = array.array(type code for data type, [array items])
 abc = array.array('d', [2.5, 4.9, 6.7]) # 'd' is a type code
@@ -74,18 +83,27 @@ index() = Returns the index of the first element with the specified value
 reverse() = Reverses the order of the list
 sort() = Sorts the list ins ascending order
 ---------------------------------------------------------------------------------------------------------
-There are four collection data types in the Python programming
-language:
-1) List is a collection which is ordered and changeable. Allows duplicate
-members.
-2)Tuple is a collection which is ordered and unchangeable. Allows
-duplicate members.
-3)Set is a collection which is unordered and unindexed. No duplicate
-members.
-4)Dictionary is a collection which is ordered* and changeable. No
-duplicate members.
+Dict functions
 
+thisdict = {
+"brand": "Toyota",
+"model": "Grande",
+"year": 2021
+}
+print(thisdict.keys())  #returns list of the keys
+print(thisdict.values()) #returns list of values
+print(thisdict.items()) #dict_items([('name', 'faisal'), ('age', 25), ('university','fast')])
 
+#looping through dict
+for key, value in thisdict.items():
+    print(f"The value of {key} is {value}")
+
+a = {"name": "faisal","age":25,"university":"fast"}
+b = {"name" : "javed"} #if dict is updated with a key-value pair with a key that already exists in the dict, it will be modified
+a.update(b)  #The update() method inserts the specified items to the dictionary. The specified items can be a dictionary, or an iterable object with key value pairs.
+a.update({"ID": '0055'})
+print(a)
+a.popitem() #last key value pair is removed
 
 ---------------------------------------------------------------------------------------------------------
 
