@@ -40,7 +40,7 @@ def print_random():
 print_random()
 ---------------------------------------------------------------------------------------------------------
 
-#Array functions
+Array functions
 
 import array
 #arrayName = array.array(type code for data type, [array items])
@@ -67,13 +67,28 @@ print(numbers)
 numbers.pop(2) #pop functions name index number as argument to delete it
 numbers.remove(12) #remove function takes value to be removed as argument
 print(numbers)
-'''clear() = Removes all the elements from the list
+clear() = Removes all the elements from the list
 copy() = Returns a copy of the list
 count() = Returns the number of elements with the specified value
 index() = Returns the index of the first element with the specified value
 reverse() = Reverses the order of the list
-sort() = Sorts the list'''
+sort() = Sorts the list ins ascending order
 ---------------------------------------------------------------------------------------------------------
+There are four collection data types in the Python programming
+language:
+1) List is a collection which is ordered and changeable. Allows duplicate
+members.
+2)Tuple is a collection which is ordered and unchangeable. Allows
+duplicate members.
+3)Set is a collection which is unordered and unindexed. No duplicate
+members.
+4)Dictionary is a collection which is ordered* and changeable. No
+duplicate members.
+
+![WhatsApp Image 2024-09-12 at 20 48 52_10cf54c6](https://github.com/user-attachments/assets/8d166074-17b8-4927-a79b-bfe58954bd30)
+
+---------------------------------------------------------------------------------------------------------
+
 
 ' '.join(lst):
 
