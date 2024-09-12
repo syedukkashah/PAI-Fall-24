@@ -196,6 +196,20 @@ class B(A):
         print("I am in B")
 obj = B()
 obj.showData()
+
+#super function (used to call parent constructor in child class)
+class Father:
+    def __init__(self):
+        print("father constructor")
+    def show(self):
+        print("father instance")
+class Son(Father):
+    def __init__(self):
+        super().__init__()
+        print("Son constructor")
+    def show(self):
+        print("son instance")
+s = Son()
 ---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
