@@ -273,6 +273,22 @@ a.addToNum(6)
 print(a.num)
 print(Math.addNums(5,6))
 
+# abstract class
+
+from abc import ABC
+class Polygon(ABC):
+    def numSides(self):
+        pass
+class Triangle(Polygon):
+    def numSides(self):
+        print("3 sides")
+class Pentagon(Polygon):
+    def numSides(self):
+        print("5 sides")
+class Hexagon(Polygon):
+    def numSides(self):
+        print("6 sides")
+
 ---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
