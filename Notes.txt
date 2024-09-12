@@ -28,6 +28,7 @@ owner name = “Umer" # no space allowed
 
 ---------------------------------------------------------------------------------------------------------
 
+
 ' '.join(lst):
 
 Purpose: This converts the list of words (lst) back into a single string, where each word is separated by a space (' ').
