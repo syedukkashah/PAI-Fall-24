@@ -1,3 +1,33 @@
+
+
+Variable Conventions
+
+# valid names
+
+numOfBoxes = 7
+
+_num_of_boxes = 10 # this is a different variable than numOfBoxes
+
+_NUM_OF_BOXES = 15 # a different variable as names are case sensitive
+
+ownerName = “Atif"
+
+ownerName2 = “Muneeba" # different, valid variable
+
+# invalid names
+
+2ownerName = “Saeeda" # cannot start with number.
+
+# Only letter or underscore in the beginning
+
+owner-name = “Bilal" # no hypen
+
+owner name = “Umer" # no space allowed
+
+# only alpha numeric and underscore
+
+---------------------------------------------------------------------------------------------------------
+
 ' '.join(lst):
 
 Purpose: This converts the list of words (lst) back into a single string, where each word is separated by a space (' ').
