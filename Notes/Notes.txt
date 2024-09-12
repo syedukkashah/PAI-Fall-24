@@ -105,9 +105,40 @@ a.update({"ID": '0055'})
 print(a)
 a.popitem() #last key value pair is removed
 
+#enumerate function
+lst = ['a', 'b', 'c', 'd']
+for index, element in enumerate(lst):
+    print(index, element)
+dict = {1:'a', 2:'b', 3:'c', 4:'d'}
+print("\n")
+for i,k in enumerate(dict): #enumerate keys of dictionary
+    print(i,k) #i = index, k = keys
+print("\n")
+#enumerate key value:
+for i, (k,v) in enumerate(dict.items()):
+    print(i,k,v)
+
 ---------------------------------------------------------------------------------------------------------
+tuple functions
 
+tuple1 = ("apple",) #tuple since it has a comma with single value
+print(type(tuple1))
+tuple2 = ("apple") #this is a str since no comma
+print(type(tuple2))
+a = (12,6,-10,'fast')
+b = (45,89)
+c = (a,b) #tuple consisting of 2 tuples
+print(c[0])
+print(c)
+print(len(c))
+#tuples are immutable, to change values, convert to list and back into tuple
+x=('a', 'b', 'c')
+y=list(x)
+y[1] = 'd'
+x = tuple(y)
+print(x)
 
+---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
 Purpose: This converts the list of words (lst) back into a single string, where each word is separated by a space (' ').
