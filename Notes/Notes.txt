@@ -159,7 +159,43 @@ a = {1:'fast', 2:'iba'}
 b = {3:'landhi',4:'johar'}
 c = ChainMap(a,b) #dict like It is dictionary like class for creating a single view of multiple mapping. It encapsulates many dictionaries into one
 print(c)
+---------------------------------------------------------------------------------------------------------
+(OOP) 
 
+
+class Circle:
+    pi = 3.14
+    def __init__(self,radius):
+        self.radius = radius
+    def calc_circumference(self):
+            return 2*Circle.pi*self.radius
+c = Circle(4)
+print(c.calc_circumference())
+
+#method overloading
+class Area:
+    def fine_area(selfself, a=None, b=None):
+        if a!=None and b!=None:
+            print(a*b)
+        elif a!=None:
+            print(a**2)
+        else:
+            print("nothing")
+
+obj1 = Area()
+obj1.fine_area()
+obj1.fine_area(10)
+obj1.fine_area(10, 20)
+
+#method overriding
+class A:
+    def showData(self):
+        print("I am in A")
+class B(A):
+    def showData(self):
+        print("I am in B")
+obj = B()
+obj.showData()
 ---------------------------------------------------------------------------------------------------------
 ' '.join(lst):
 
