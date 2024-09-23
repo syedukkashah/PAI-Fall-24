@@ -1,3 +1,6 @@
+from abc import abstractmethod
+
+
 class A:
     def __init__(self):
         print("parent constructor")
@@ -11,6 +14,10 @@ class A:
     def showData(self):
         print("i am in A")
 
+    @abstractmethod # placeholder indicates that method is abstract
+    def func(self):
+        pass
+
 class B(A):
     def __init__(self):
         super().__init__() #calling parent constructor
@@ -20,9 +27,14 @@ class B(A):
     def addNums(a,b):
         return a + b
 
+    def func(self):
+        print("abstract method")
+
+
     @classmethod #used to bound method to class rather than an instance of it
     def setNum(self, a):
         self.a = a
+
 B.addNums = staticmethod(B.addNums) #makes a method  static
 
 obj = A()
@@ -35,3 +47,4 @@ obj.showData()
 print(B.addNums(4,5))
 B.setNum(3)
 print(obj.a)
+obj.func()
