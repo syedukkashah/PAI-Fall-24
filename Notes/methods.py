@@ -17,6 +17,13 @@ class B(A):
         print("child constructor")
     def showData(self): #method overloaded in child class
         print("I am in B")
+    def addNums(a,b):
+        return a + b
+
+    @classmethod #used to bound method to class rather than an instance of it
+    def setNum(self, a):
+        self.a = a
+B.addNums = staticmethod(B.addNums) #makes a method  static
 
 obj = A()
 obj.find_area()
@@ -25,3 +32,6 @@ obj.find_area(3,2)
 obj.showData()
 obj = B()
 obj.showData()
+print(B.addNums(4,5))
+B.setNum(3)
+print(obj.a)
