@@ -23,6 +23,7 @@ class B(A):
         super().__init__() #calling parent constructor
         print("child constructor")
     def showData(self): #method overloaded in child class
+        super().showData() #calls parent class method
         print("I am in B")
     def addNums(a,b):
         return a + b
