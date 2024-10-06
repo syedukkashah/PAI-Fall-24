@@ -34,3 +34,9 @@ print(array-array)#arr[i] = arr[i]-arr[i]
 print(array.sum()) #prints sum of all elements
 print(array.mean()) #mean of elements
 print(array.max()) #max element
+arr_2d = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])
+print(arr_2d)
+#axis 0 refer to the cols
+print(arr_2d.sum(axis = 0)) #returns arr with sum of elements down the cols
+print(arr_2d.shape) #returns dimensions
+print(arr_2d.sum(axis = 1)) # returns arr with sum of elements across each row
