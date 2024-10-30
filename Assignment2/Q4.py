@@ -1,0 +1,13 @@
+import numpy as np
+arr = np.arange(1,17).reshape(4,4)
+arr2 = np.arange(17,33).reshape(4,4)
+print("Array1: ", arr)
+print("Array2: ", arr2)
+print("ADDITION\n")
+print(arr+arr2)
+print("SUBTRACTION\n")
+print(arr2-arr)
+print("DIVISION\n")
+print(arr2/arr)
+print("PRODUCT\n")
+print(arr*arr2)
